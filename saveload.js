@@ -3,6 +3,8 @@ function load(){
 	if (save){
 		var saveObj = JSON.parse(save);
 		if (saveObj){
+			saveObj = versionCheck(saveObj);
+			data.version = saveObj.version;
 			data.sound = saveObj.sound
 			data.music = saveObj.music
 			data.screenshake = saveObj.screenshake
@@ -19,6 +21,7 @@ function saveExists(){
 }
 function save(){
 	var saveObj = {
+		version: data.version,
 		sound: data.sound,
 		music: data.music,
 		screenshake: data.screenshake,
@@ -33,3 +36,10 @@ function clearSave(){
 //function setOS13KTrophy(icon,trophyName,message){
 	//if (icon && trophyName) localStorage['OS13kTrophy,'+icon+',Heaven Ascent,'+trophyName] = message;
 //}
+function versionCheck(saveObj){
+	//v1.0 -> v1.1
+	//	no updates needed
+	
+	saveObj.version = data.version;
+	return saveObj;
+}

@@ -288,6 +288,7 @@ function drawMenu(scene){
 			ctx.drawFontCenter("it, four hundred and four golden stars", canvas.width/2, 190, 2);
 			break;
 		case "mainmenu":
+			ctx.drawFontRight("v" + data.version.join("."), canvas.width - data.tileSize, canvas.height - data.tileSize, 1);
 			data.menus.main.draw();
 			break;
 		case "secretmenu":

@@ -1,5 +1,7 @@
 
 var data = {
+	version: [1,1,0],
+	
 	INTERVAL:1000/60,
 	lastTime:(new Date()).getTime(),
 	lskey: "heavenascent",
@@ -7,7 +9,7 @@ var data = {
 	gravity: 0.9,				//ddy/frame (downward acceleration while not contacting the ground)
 	
 	jumpImpulse: 50,			//subtracted from object ddy when jumping
-	jumpBoost: 0.4,			//subtracted from object ddy when moving upwards so the player can control jump height
+	jumpBoost: 0.4,				//subtracted from object ddy when moving upwards so the player can control jump height
 	coyoteFrames: 10,			//grace period while not contacting the ground before losing the ability to jump
 	
 	maxDX: 8,					//dx/frame

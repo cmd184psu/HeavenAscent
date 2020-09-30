@@ -374,11 +374,13 @@ function handleKeyPress(evt){
 			switch (data.scene){
 				case "game":
 				case "death":
-				case "credits":
 					switchScene("mainmenu");
 					break;
 				case "mainmenu":
 					switchScene(data.previousScene);
+					break;
+				case "credits":
+					switchScene("mainmenu",true);
 					break;
 				case "end":
 					switchScene("title");
