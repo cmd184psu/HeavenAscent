@@ -1,6 +1,6 @@
 
 var data = {
-	version: [1,1,0],
+	version: [1,1,1],
 	
 	INTERVAL:1000/60,
 	lastTime:(new Date()).getTime(),
