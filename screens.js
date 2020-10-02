@@ -173,6 +173,8 @@ function linear(s,r){
 	}
 }
 function vertical(s){
+	s[0][0] = 1
+	s[0][data.tilesX-1] = 1;
 	s[data.tilesY-1]  = [1,1,,,,,,,,,,,,,,,,,1,1]
 	for (var i=1;i<=4;i++){
 		var f = data.tilesY-1 - i*3;
